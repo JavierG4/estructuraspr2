@@ -15,6 +15,11 @@ module microc(output wire [5:0] Opcode, output wire zero, input wire clk, reset,
   output reg Zero; // Indica si ha sido cero
   alu aluop(WD3,Zero,RD1,muxsalida,ALUOp);
 
+  assign Zero1 = Zero;
+  output reg zero2;
+  ffd biestable(clk,reset,Zero1,wez,zero2);
+  assign zero = zero2;
+
 // Parte de instruccion para atras
   wire [9:0] PC_actual;
   wire [9:0] PC_nuevo;
