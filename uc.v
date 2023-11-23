@@ -1,7 +1,7 @@
-module unidad_control(output reg s_inc , s_inm, we3, output reg [2:0] Op, output reg wez, input wire[5 : 0]opcode, input wire reloj, reset, zero);
+module unidad_control(output reg s_inc , s_inm, we3, output reg [2:0] Op, output reg wez, input wire[5 : 0]opcode, input wire clk, reset, zero);
   always @(*)
   begin
-    if (reloj == 1'b1 && reset == 1'b0) begin
+    if (clk == 1'b1 && reset == 1'b0) begin
       casex (opcode)
           6'b0000??:  //LI
           s_inc <= 1'b1
