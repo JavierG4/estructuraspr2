@@ -1,0 +1,26 @@
+Inmd
+0000 : LI
+0001 : ADI
+0010 : SBI
+0011 : NAI
+
+Alu
+0100: B
+0101: Not A
+0110: a + b
+0111 a - b
+1000 a and b
+1001 a or b
+1010 : NAND a y b
+1011: a negado(complemento a 1)
+—-----------
+Saltos
+111100 J
+111101 JZ
+111110 JNZ
+—----------------------
+Sin uso
+1100
+1101
+1110
+1111

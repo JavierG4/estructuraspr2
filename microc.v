@@ -28,5 +28,5 @@ module microc(output wire [5:0] Opcode, output wire zero, input wire clk, reset,
 
   wire Datum [15:0];
   memprog memoria(Datum,clk,PC_actual);
-  assign Opcode = Datum[9:0];
+  assign Opcode = Datum[15:10];
 endmodule
